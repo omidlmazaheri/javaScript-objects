@@ -6,16 +6,19 @@
     <title>Document</title>
 </head>
 <body>
-    <p id="showTheList"></p>
+   <ol id="students"></ol>
     <script>
-        // let person1, person2 , person3;
-        // person1='ali';
-        // person2='nader';
-        // person3='johnatan';
+       
+       
+        
         let persons=['ali','nader','johnatan'];
         for (let index = 0; index < persons.length; index++) {
             
-             document.getElementById("showTheList").innerHTML+=persons[index]+"<br>";
+            //  document.getElementById("showTheList").innerHTML+=persons[index]+"<br>";
+            let node= document.createElement("li");
+            let textnode = document.createTextNode(persons[index]);
+            node.appendChild(textnode);
+            document.getElementById("students").appendChild(node);
         }
        
                                     
