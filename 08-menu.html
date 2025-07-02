@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@33.003/misc/Farsi-Digits/Vazirmatn-FD-font-face.css">
+    <style>
+        *{
+            direction: rtl;
+            font-family: vazirmatn fd;
+
+        }
+        .main-menu {
+            background-color: black;
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+        }
+
+        .menu-item {
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        debugger
+        const menuItems = ['خانه', 'درباره من', 'پروژه‌ها', 'تماس با من'];
+        // ساخت عنصر منو (ul)
+        const menu = document.createElement('ul');
+        menu.className = 'main-menu'; // برای استایل‌دهی
+
+        // پیمایش آرایه و ساخت آیتم‌های منو
+        for (let index = 0; index < menuItems.length; index++) {
+            
+             const li = document.createElement('li');
+            li.textContent = menuItems[index];
+            li.className = 'menu-item'; // برای CSS
+            menu.appendChild(li);
+        }
+       
+
+        // اضافه‌کردن منو به بدنه صفحه
+        document.body.appendChild(menu);
+
+    </script>
+</body>
+
+</html>
